@@ -8,7 +8,7 @@ class Estoque:
 
 
     def salvar_produtos(self):
-        entrada = input('Digite o código do fabricante:')
+        entrada = input('código do fabricante: ')
         for i in range(len(self.listaFabri)):
             if entrada == self.listaFabri[i].codi:
                 entrada_cod = input('código do produto: ')

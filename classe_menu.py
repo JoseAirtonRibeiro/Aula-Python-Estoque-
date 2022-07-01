@@ -12,11 +12,11 @@ class Menu:
         saida.entrada2 = estoque
 
         while True:
-            entrada_fab = input('Informe a opção desejada:\n1 - Cadastrar Fabricante\n2 - Ja tenho um Fabricante\nEntrada:')
+            entrada_fab = input('[1] - Cadastrar Fabricante\n[2] - Fabricante já existente\n')
             if entrada_fab == '1':
                 estoque.cadastrar_fabri()
             elif entrada_fab == '2':
-                entrada2 = input('Informe a opção desejada:\n1 - Cadastrar Produto\n2 - Listar todos\n3 - Alterar Produto\n4 - Comprar do estoque\n5 - Saida do produto\n0 - Sair\nEntrada:')
+                entrada2 = input('[1] - Cadastrar Produto\n[2] - Listar todos\n[3] - Alterar Produto\n[4] - Comprar do estoque\n[5] - Saida do produto\n[6] - Sair\n')
                 if entrada2 == '1':
                     estoque.salvar_produtos()
                 elif entrada2 == '2':
@@ -27,12 +27,10 @@ class Menu:
                     compra.comprar_produtos()
                 elif entrada2 == '5':
                     saida.sair_produtos()
-                elif entrada2 == '0':
-                    print('Saindo...')
+                elif entrada2 == '6':
+                    print('Operação Finalizada')
                     break
                 else:
-                    print('Opção escolhida não existe')
-                    print('===================================')
+                    print('Invalido!')
             else:
-                    print('Opção escolhida não existe')
-                    print('===================================')
+                    print('invalido!')
